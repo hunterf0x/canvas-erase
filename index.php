@@ -1,33 +1,53 @@
-<!doctype html>
-<html class="no-js">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <!--<link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">-->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <style>
-        p {position:absolute;top:0px;left:0px;width:400px;height:300px;}
-        #canvas {position:absolute;top:0px;left:0px;}
+        .content-hide {position:absolute;top:0px;left:0px;width:400px;height:300px;}
+        /*#canvas {position:absolute;top:0px;left:0px;}*/
+        #canvas{
+            height: 100%;
+            width: 100%;
+
+        }
     </style>
 </head>
 <body>
-<!--[if lt IE 8]>
+<!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<p>Esta es una prueba :D</p>
-<canvas id="canvas" width="400" height="400"></canvas>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+
+        <article>
+            <p class="content-hide">Esta es una prueba :D</p>
+            <canvas id="canvas" ></canvas>
+        </article>
+
+
+
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 <script src="js/functions.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
@@ -43,3 +63,4 @@
 </script>
 </body>
 </html>
+
