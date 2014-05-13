@@ -26,7 +26,7 @@ $(function() {
             grd.addColorStop(1, "transparent");
             ctx.fillStyle = grd;
             ctx.beginPath();
-            ctx.arc(pointX,pointY,50,0,Math.PI*2,true);
+            ctx.arc(pointX,pointY,10,0,Math.PI*2,true);
             ctx.fill();
             ctx.closePath();
         }
