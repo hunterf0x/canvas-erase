@@ -1,60 +1,45 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		
-		<style>
-			p {position:absolute;top:0px;left:0px;width:400px;height:300px;}
-			#c {position:absolute;top:0px;left:0px;}
-		</style>
-		
-		
-		
-		<script type="text/javascript">
-		function init() {
-			var canvas = document.getElementById('c');
-			var ctx = canvas.getContext('2d');
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-			var img = document.createElement('IMG');
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+    <style>
+        p {position:absolute;top:0px;left:0px;width:400px;height:300px;}
+        #canvas {position:absolute;top:0px;left:0px;}
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-			img.onload = function () {
-			    ctx.beginPath();
-			    ctx.drawImage(img, 0, 0);
-			    ctx.closePath();    
-			    ctx.globalCompositeOperation = 'destination-out';    
-			}
+<!-- Add your site or application content here -->
+<p>Hello world! This is HTML5 Boilerplate.</p>
+<canvas id="canvas" width="400" height="400"></canvas>
 
-			img.src = "http://dl.dropbox.com/u/12501653/FROST.png";
-		
-			function drawPoint(pointX,pointY){
-			    var grd = ctx.createRadialGradient(pointX, pointY, 0, pointX, pointY, 50);
-			    grd.addColorStop(0, "rgba(255,255,255,.6)"); 
-			    grd.addColorStop(1, "transparent"); 
-			    ctx.fillStyle = grd;
-			    ctx.beginPath();
-			    ctx.arc(pointX,pointY,50,0,Math.PI*2,true);
-			    ctx.fill();
-				ctx.closePath();
-			}
-			
-			canvas.addEventListener('touchstart',function(e){
-				drawPoint(e.touches[0].screenX,e.touches[0].screenY);
-			},false);
-			
-			canvas.addEventListener('touchmove',function(e){
-				e.preventDefault();
-				drawPoint(e.touches[0].screenX,e.touches[0].screenY);
-			},false);
-			
-			
-		}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+<script src="js/functions.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-		</script>
-	</head>
-	<body onload="javascript:init();">
-	<div>
-	    <p>testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... testing... </p>
-	    <canvas id="c" width="400" height="400"></canvas>
-	</div>
-	</body>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+</body>
 </html>
