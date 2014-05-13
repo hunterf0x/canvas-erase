@@ -34,19 +34,18 @@
 
 
 
-<div class="main-container">
-    <div class="main wrapper clearfix">
 
-        <article>
-            <p class="content-hide"><a href="">Esta es una prueba :D</a></p>
-            <canvas id="canvas" width="500" height="500" ></canvas>
-        </article>
+<div id="container">
 
 
+    <div id="main" role="main">
+        <canvas id="canvas" width="1246" height="300">
+            <!-- Provide fallback -->
+        </canvas>
+    </div>
 
-    </div> <!-- #main -->
-</div> <!-- #main-container -->
 
+</div>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
