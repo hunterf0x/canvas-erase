@@ -20,6 +20,8 @@
         #canvas{
             position:absolute;
             width: 100%;
+            max-width: 100%;
+            height: auto;
             top:0px;
             left:0px;
         }
