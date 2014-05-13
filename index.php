@@ -39,7 +39,7 @@
 
         <article>
             <p class="content-hide"><a href="">Esta es una prueba :D</a></p>
-            <canvas id="canvas" ></canvas>
+            <canvas id="canvas" width="500" height="500" ></canvas>
         </article>
 
 
