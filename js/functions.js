@@ -3,21 +3,28 @@
  */
 $(function() {
 
-
+    init();
 
 
         //Get the canvas & context
-        var canvas = $('#respondCanvas');
-        var ctx = canvas.get(0).getContext('2d');
-        var container = $(canvas).parent();
+        //var canvas = $('#respondCanvas');
+        //var ctx = canvas.get(0).getContext('2d');
+        //var container = $(canvas).parent();
 
         //Run function when browser  resize
-        $(window).resize( respondCanvas );
+        //$(window).resize( respondCanvas );
 
-        function respondCanvas(){
 
-            canvas.attr('width', $(container).width() ); //max width
-            canvas.attr('height', $(container).height() ); //max height
+
+
+
+
+
+    function init(){
+        var canvas = document.getElementById('respondCanvas');
+            var ctx = canvas.getContext('2d');
+            //canvas.attr('width', $(container).width() ); //max width
+            //canvas.attr('height', $(container).height() ); //max height
 
             var img = document.createElement('IMG');
             img.onload = function () {
@@ -30,17 +37,17 @@ $(function() {
             img.src = "http://images.forwallpaper.com/files/thumbs/preview/8/84534__snow-frost-window_p.jpg";
 
             //Redraw & reposition content
-            var x = canvas.width();
-            var y = canvas.height();
-            ctx.font = "20px Calibri";
+            //var x = canvas.width();
+            //var y = canvas.height();
+            //ctx.font = "20px Calibri";
 
-            ctx.fillStyle = "#DDDDDD"; //black
+           /* ctx.fillStyle = "#DDDDDD"; //black
             ctx.fillRect( 0, 0, x, y); //fill the canvas
 
             var resizeText = "Canvas width: "+canvas.width()+"px";
             ctx.textAlign = "center";
             ctx.fillStyle = "#333333"; //white
-            ctx.fillText(resizeText, (x/2), (y/2) );
+            ctx.fillText(resizeText, (x/2), (y/2) );*/
 
 
             function drawPoint(pointX,pointY){
@@ -67,8 +74,9 @@ $(function() {
 
         }
 
+
         //Initial call
-        respondCanvas();
+        //respondCanvas();
 
 
 
