@@ -39,12 +39,15 @@
 
 
     <div id="main" role="main">
-        <canvas id="canvas" width="1246" height="300">
+        <canvas id="respondCanvas" width="1246" height="300">
             <!-- Provide fallback -->
         </canvas>
     </div>
 
-
+    <footer>
+        <p><a href="http://ameijer.nl/2011/08/resizable-html5-canvas/">Read the entire article</a></p>
+        <p>Demo by <a href="http://ameijer.nl">AMeijer</a></p>
+    </footer>
 </div>
 
 
