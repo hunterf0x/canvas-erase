@@ -23,7 +23,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
+<p>Esta es una prueba :D</p>
 <canvas id="canvas" width="400" height="400"></canvas>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
