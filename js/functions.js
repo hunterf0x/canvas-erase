@@ -17,7 +17,7 @@ $(function() {
             ctx.globalCompositeOperation = 'destination-out';
         }
 
-        img.src = "http://dl.dropbox.com/u/12501653/FROST.png";
+        img.src = "http://images.forwallpaper.com/files/thumbs/preview/8/84534__snow-frost-window_p.jpg";
 
         function drawPoint(pointX,pointY){
             var grd = ctx.createRadialGradient(pointX, pointY, 0, pointX, pointY, 50);
