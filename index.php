@@ -25,6 +25,12 @@
             top:0px;
             left:0px;
         }
+        #main{
+            display:block;
+            width:80%;
+            padding:50px 10%;
+            height:400px;
+        }
     </style>
 </head>
 <body>
@@ -39,15 +45,12 @@
 
 
     <div id="main" role="main">
-        <canvas id="respondCanvas" width="1246" height="300">
+        <canvas id="respondCanvas">
             <!-- Provide fallback -->
         </canvas>
     </div>
 
-    <footer>
-        <p><a href="http://ameijer.nl/2011/08/resizable-html5-canvas/">Read the entire article</a></p>
-        <p>Demo by <a href="http://ameijer.nl">AMeijer</a></p>
-    </footer>
+
 </div>
 
 
