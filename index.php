@@ -17,7 +17,7 @@
     <style>
         .content-hide {position:absolute;top:0px;left:0px;width:50%;height:10%;}
         /*#canvas {position:absolute;top:0px;left:0px;}*/
-        #canvas{
+        #respondCanvas{
             position:absolute;
             width: 100%;
             max-width: 100%;
