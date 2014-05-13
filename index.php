@@ -10,18 +10,19 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--<link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">-->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <style>
         .content-hide {position:absolute;top:0px;left:0px;width:400px;height:300px;}
-        #canvas {position:absolute;top:0px;left:0px; height: 100%;width: 100%;}
-        /*#canvas{
-            height: 100%;
+        /*#canvas {position:absolute;top:0px;left:0px;}*/
+        #canvas{
+            position:absolute;
             width: 100%;
-
-        }*/
+            top:0px;
+            left:0px;
+        }
     </style>
 </head>
 <body>

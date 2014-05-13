@@ -4,17 +4,6 @@
 $(function() {
     init();
 
-    var canvas = $("#canvas");
-    $(window).resize(refreshCanvas());
-
-    refreshCanvas();
-
-    function refreshCanvas() {
-        //canvas/context resize
-        canvas.attr("width", $(window).get(0).innerWidth / 2);
-        canvas.attr("height", $(window).get(0).innerHeight / 2);
-
-    };
 
     function init() {
         var canvas = document.getElementById('canvas');
