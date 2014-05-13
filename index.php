@@ -38,7 +38,7 @@
     <div class="main wrapper clearfix">
 
         <article>
-            <p class="content-hide">Esta es una prueba :D</p>
+            <p class="content-hide"><a href="">Esta es una prueba :D</a></p>
             <canvas id="canvas" ></canvas>
         </article>
 
