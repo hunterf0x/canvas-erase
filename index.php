@@ -26,7 +26,7 @@
 
 
 <div id="container">
-    <canvas id="canvas" style="display: none" >
+    <canvas id="canvas">
         HTML5 Canvas not supported.
     </canvas>
     <div id="fix"><img src="img/mapa.png" /> </div>
