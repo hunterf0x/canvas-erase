@@ -3,13 +3,13 @@
  */
 $(function() {
 
-    init();
+
 
 
         //Get the canvas & context
-        //var canvas = $('#respondCanvas');
-        //var ctx = canvas.get(0).getContext('2d');
-        //var container = $(canvas).parent();
+        var ctm = $('#respondCanvas');
+        var ctx = ctm.get(0).getContext('2d');
+        var container = $(ctm).parent();
 
         //Run function when browser  resize
         $(window).resize( init );
@@ -21,10 +21,10 @@ $(function() {
 
 
     function init(){
-        var canvas = document.getElementById('respondCanvas');
-            var ctx = canvas.getContext('2d');
-            //canvas.attr('width', $(container).width() ); //max width
-            //canvas.attr('height', $(container).height() ); //max height
+        //var canvas = document.getElementById('respondCanvas');
+            //var ctx = canvas.getContext('2d');
+            ctm.attr('width', $(container).width() ); //max width
+            ctm.attr('height', $(container).height() ); //max height
 
             var img = document.createElement('IMG');
             img.onload = function () {
@@ -61,11 +61,11 @@ $(function() {
                 ctx.closePath();
             }
 
-            canvas.addEventListener('touchstart',function(e){
+            window.addEventListener('touchstart',function(e){
                 drawPoint(e.touches[0].screenX,e.touches[0].screenY);
             },false);
 
-            canvas.addEventListener('touchmove',function(e){
+            window.addEventListener('touchmove',function(e){
                 e.preventDefault();
                 drawPoint(e.touches[0].screenX,e.touches[0].screenY);
             },false);
@@ -77,6 +77,7 @@ $(function() {
 
         //Initial call
         //respondCanvas();
+    init();
 
 
 
