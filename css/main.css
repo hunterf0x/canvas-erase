@@ -428,11 +428,7 @@ body,html
     background: yellow;
     /*height: 20px;*/
     tex-align: center;
-    background: url('../img/mapa.png') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 html {
     background: url('../img/mapa.png') no-repeat center center fixed;
