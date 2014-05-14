@@ -11,22 +11,13 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width; minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-   <!-- <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">-->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <style>
         .content-hide {position:absolute;top:0px;left:0px;width:50%;height:10%;}
         /*#canvas {position:absolute;top:0px;left:0px;}*/
-
-        /* Mis cambios*/
-        body,html
-        {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
         #container
         {
 
