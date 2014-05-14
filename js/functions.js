@@ -61,18 +61,19 @@ $(function() {
                 ctx.closePath();
             }
 
-            window.addEventListener('touchstart',function(e){
-                drawPoint(e.touches[0].screenX,e.touches[0].screenY);
-            },false);
 
-            window.addEventListener('touchmove',function(e){
-                e.preventDefault();
-                drawPoint(e.touches[0].screenX,e.touches[0].screenY);
-            },false);
 
 
 
         }
+    window.addEventListener('touchstart',function(e){
+        drawPoint(e.touches[0].screenX,e.touches[0].screenY);
+    },false);
+
+    window.addEventListener('touchmove',function(e){
+        e.preventDefault();
+        drawPoint(e.touches[0].screenX,e.touches[0].screenY);
+    },false);
 
 
         //Initial call

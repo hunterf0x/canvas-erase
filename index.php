@@ -1,75 +1,117 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout Example</title>
 
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <style>
-        .content-hide {position:absolute;top:0px;left:0px;width:50%;height:10%;}
-        /*#canvas {position:absolute;top:0px;left:0px;}*/
-        #respondCanvas{
-            position:absolute;
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            top:0px;
-            left:0px;
+    <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        body,html
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: black;
         }
-        #main{
-            display:block;
-            width:90%;
-            padding:10%;
-            min-height:400px;
-            height: 90%;
+
+        #container
+        {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: blue;
+        }
+
+        #container canvas {
+            vertical-align: top;
+            display: block;
+            overflow: auto;
+        }
+
+        #fix {
+            background: yellow;
+            height: 20px;
+            tex-align: center;
         }
     </style>
 </head>
 <body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
-
-
-
 <div id="container">
-
-
-    <div id="main" role="main">
-        <canvas id="respondCanvas">
-            <!-- Provide fallback -->
-        </canvas>
-    </div>
-
-
+    <canvas id="canvas">
+        HTML5 Canvas not supported.
+    </canvas>
+    <div id="fix">Some Text Here</div>
 </div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() { // document ready, resize container
 
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-<script src="js/functions.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+        var rc = 0;  // resize counter
+        var oc = 0;  // orientiation counter
+        var ios = navigator.userAgent.match(/(iPhone)|(iPod)/); // is iPhone
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+        function orientationChange() {
+            // inc orientation counter
+            oc++;
+        }
+        function resizeCanvas() {
+            // inc resize counter
+            rc++;
+
+            if (ios) {
+                // increase height to get rid off ios address bar
+                $("#container").height($(window).height() + 60)
+            }
+
+            var width = $("#container").width();
+            var height = $("#container").height();
+
+            cheight = height - 20; // subtract the fix height
+            cwidth = width;
+
+            // set canvas width and height
+            $("#canvas").attr('width', cwidth);
+            $("#canvas").attr('height', cheight)
+
+            // hides the WebKit url bar
+            if (ios) {
+                setTimeout(function() {
+                    window.scrollTo(0, 1);
+                }, 100);
+            }
+            ctx.fillStyle = 'green';
+            ctx.fillRect(0, 0, cwidth, cheight);
+            ctx.fillStyle = 'black';
+            ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
+
+            // write number of orientation changes and resize events
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.fillText('Orientiation changes: '+oc, cwidth/2, cheight/2);
+            ctx.fillText('Resize events: '+rc, cwidth/2, cheight/2 + 10);
+        }
+
+        // Install resize and orientation change handlers. Note Android may firef both
+        // resize and orientation changes when rotating.
+        var resizeTimeout;
+        $(window).resize(function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(resizeCanvas, 100);
+        });
+        resizeCanvas();
+
+        var otimeout;
+        window.onorientationchange = function() {
+            clearTimeout(otimeout);
+            otimeout = setTimeout(orientationChange, 50);
+        }
+    });
 </script>
 </body>
 </html>
-
+Status API Training Shop Blog About © 2014 GitHub, Inc. Terms Privacy Security Contact
