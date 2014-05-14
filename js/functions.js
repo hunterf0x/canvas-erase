@@ -26,7 +26,7 @@ $(function() {
         var width = $("#container").width();
         var height = $("#container").height();
 
-        cheight = height - 20; // subtract the fix height
+        cheight = height; // subtract the fix height
         cwidth = width;
 
         // set canvas width and height
@@ -39,7 +39,7 @@ $(function() {
                 window.scrollTo(0, 1);
             }, 100);
         }
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, cwidth, cheight);
         ctx.fillStyle = 'black';
         ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
