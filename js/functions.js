@@ -3,10 +3,97 @@
  */
 $(function() {
 
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var rc = 0;  // resize counter
+    var oc = 0;  // orientiation counter
+    var ios = navigator.userAgent.match(/(iPhone)|(iPod)/); // is iPhone
+
+    function orientationChange() {
+        // inc orientation counter
+        oc++;
+    }
+    function resizeCanvas() {
+        // inc resize counter
+        rc++;
+
+        if (ios) {
+            // increase height to get rid off ios address bar
+            $("#container").height($(window).height() + 60)
+        }
+
+        var width = $("#container").width();
+        var height = $("#container").height();
+
+        cheight = height - 20; // subtract the fix height
+        cwidth = width;
+
+        // set canvas width and height
+        $("#canvas").attr('width', cwidth);
+        $("#canvas").attr('height', cheight)
+
+        // hides the WebKit url bar
+        if (ios) {
+            setTimeout(function() {
+                window.scrollTo(0, 1);
+            }, 100);
+        }
+        /*ctx.fillStyle = 'green';
+        ctx.fillRect(0, 0, cwidth, cheight);
+        ctx.fillStyle = 'black';
+        */
+        ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
+        /*
+        // write number of orientation changes and resize events
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.fillText('Orientiation changes: '+oc, cwidth/2, cheight/2);
+        ctx.fillText('Resize events: '+rc, cwidth/2, cheight/2 + 10);*/
+
+        var img = new Image();
+
+        img.onload = function () {
+            ctx.beginPath();
+            ctx.drawImage(img, 10, 10, this.width, this.height, 0, 0, canvas.width, canvas.height);
+            ctx.closePath();
+            ctx.globalCompositeOperation = 'destination-out';
+        }
+
+        img.src = "http://images.forwallpaper.com/files/thumbs/preview/8/84534__snow-frost-window_p.jpg";
+
+
+    }
 
 
 
-        //Get the canvas & context
+
+
+
+
+
+
+    // Install resize and orientation change handlers. Note Android may firef both
+    // resize and orientation changes when rotating.
+    var resizeTimeout;
+    $(window).resize(function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resizeCanvas, 100);
+    });
+    resizeCanvas();
+
+    var otimeout;
+    window.onorientationchange = function() {
+        clearTimeout(otimeout);
+        otimeout = setTimeout(orientationChange, 50);
+    }
+
+
+
+
+
+
+       /* //Get the canvas & context
         var ctm = $('#respondCanvas');
         var ctx = ctm.get(0).getContext('2d');
         var container = $(ctm).parent();
@@ -41,13 +128,13 @@ $(function() {
             //var y = canvas.height();
             //ctx.font = "20px Calibri";
 
-           /* ctx.fillStyle = "#DDDDDD"; //black
+           *//* ctx.fillStyle = "#DDDDDD"; //black
             ctx.fillRect( 0, 0, x, y); //fill the canvas
 
             var resizeText = "Canvas width: "+canvas.width()+"px";
             ctx.textAlign = "center";
             ctx.fillStyle = "#333333"; //white
-            ctx.fillText(resizeText, (x/2), (y/2) );*/
+            ctx.fillText(resizeText, (x/2), (y/2) );*//*
 
 
             function drawPoint(pointX,pointY){
@@ -79,7 +166,7 @@ $(function() {
         //Initial call
         //respondCanvas();
     init();
-
+*/
 
 
 
