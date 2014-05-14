@@ -12,7 +12,7 @@ $(function() {
         //var container = $(canvas).parent();
 
         //Run function when browser  resize
-        //$(window).resize( respondCanvas );
+        $(window).resize( init );
 
 
 
