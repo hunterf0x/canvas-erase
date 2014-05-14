@@ -20,7 +20,7 @@ $(function() {
 
         if (ios) {
             // increase height to get rid off ios address bar
-            $("#container").height($(window).height() + 20)
+            $("#container").height($(window).height() + 60)
         }
 
         var width = $("#container").width();
@@ -54,7 +54,7 @@ $(function() {
         var img = document.createElement('IMG');
         img.onload = function () {
             ctx.beginPath();
-            ctx.drawImage(img, 10, 10, img.width-20, img.height-20, 10, 10, canvas.width-20, canvas.height-20);
+            ctx.drawImage(img, 10, 10, img.width-20, img.height-100, 10, 10, canvas.width-20, canvas.height-20);
             ctx.closePath();
             ctx.globalCompositeOperation = 'destination-out';
         }
