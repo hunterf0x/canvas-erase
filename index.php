@@ -15,52 +15,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <style>
-        .content-hide {position:absolute;top:0px;left:0px;width:50%;height:10%;}
-        /*#canvas {position:absolute;top:0px;left:0px;}*/
-        #container
-        {
 
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            /*background: blue;*/
-        }
-
-        #container canvas {
-            z-index: 2;
-            vertical-align: top;
-            display: block;
-            overflow: auto;
-            position: absolute;
-        }
-
-        #fix {
-            position: absolute;
-            z-index:1;
-            top: 0;
-            left: 0;
-            color: black;
-            /*height: 20px;*/
-            tex-align: center;
-            max-width:100%;
-            height:100%;
-
-        }
-        #fix img{
-            width:100% !important;
-            height:100% !important;
-            display:block;
-        }
-        /*body {
-            background: url('../img/mapa.png') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size:   cover;
-
-        }*/
-    </style>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -71,7 +26,7 @@
 
 
 <div id="container">
-    <canvas id="canvas" >
+    <canvas id="canvas" style="display: none" >
         HTML5 Canvas not supported.
     </canvas>
     <div id="fix"><img src="img/mapa.png" /> </div>
