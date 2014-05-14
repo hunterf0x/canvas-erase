@@ -30,7 +30,7 @@
 
 
 <div id="container">
-    <canvas id="canvas">
+    <canvas id="canvas" style="display: none">
         HTML5 Canvas not supported.
     </canvas>
     <div id="fix">asdasd </div>
