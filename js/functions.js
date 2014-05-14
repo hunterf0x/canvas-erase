@@ -31,7 +31,7 @@ $(function() {
 
         // set canvas width and height
         $("#canvas").attr('width', cwidth);
-        $("#canvas").attr('height', cheight-40)
+        $("#canvas").attr('height', cheight)
 
         // hides the WebKit url bar
         if (ios) {
@@ -42,7 +42,7 @@ $(function() {
         ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, cwidth, cheight-20);
         ctx.fillStyle = 'black';
-        ctx.fillRect(10, 10, cwidth - 20, cheight - 40)
+        ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
         /*
         // write number of orientation changes and resize events
         ctx.fillStyle = 'white';
@@ -54,7 +54,7 @@ $(function() {
         var img = document.createElement('IMG');
         img.onload = function () {
             ctx.beginPath();
-            //ctx.drawImage(img, 10, 10, img.width-20, img.height-40, 10, 10, canvas.width-20, canvas.height-20);
+            ctx.drawImage(img, 10, 10, img.width-20, img.height-20, 10, 10, canvas.width-20, canvas.height-20);
             ctx.closePath();
             ctx.globalCompositeOperation = 'destination-out';
         }
