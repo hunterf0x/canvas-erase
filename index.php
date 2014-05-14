@@ -33,7 +33,7 @@
     <canvas id="canvas" style="display: none">
         HTML5 Canvas not supported.
     </canvas>
-    <div id="fix">asdasd </div>
+    <div id="fix"><img src="img/mapa.png" /> </div>
 </div>
 
 
