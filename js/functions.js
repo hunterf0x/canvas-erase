@@ -51,11 +51,11 @@ $(function() {
         ctx.fillText('Orientiation changes: '+oc, cwidth/2, cheight/2);
         ctx.fillText('Resize events: '+rc, cwidth/2, cheight/2 + 10);*/
 
-        var img = new Image();
-
+        //var img = new Image();
+        var img = document.createElement('IMG');
         img.onload = function () {
             ctx.beginPath();
-            ctx.drawImage(img, 10, 10, this.width, this.height, 0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 10, 10, img.width, img.height, 10, 10, canvas.width, canvas.height);
             ctx.closePath();
             ctx.globalCompositeOperation = 'destination-out';
         }
