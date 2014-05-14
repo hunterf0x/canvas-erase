@@ -432,28 +432,10 @@ body,html
     height:100%;
 
 }
-
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : landscape){
-    #fix img{
-        width:100% !important;
-        height:auto !important;
-        display:block;
-    }
-}
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : portrait) {
-    #fix img{
-        width:100% !important;
-        height:auto !important;
-        display:block;
-    }
+#fix img{
+    width:100% !important;
+    height:100% !important;
+    display:block;
 }
 /*body {
     background: url('../img/mapa.png') no-repeat center center fixed;
