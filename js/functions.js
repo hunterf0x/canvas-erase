@@ -55,7 +55,7 @@ $(function() {
         var img = document.createElement('IMG');
         img.onload = function () {
             ctx.beginPath();
-            ctx.drawImage(img, 10, 10, img.width, img.height, 10, 10, canvas.width, canvas.height);
+            ctx.drawImage(img, 10, 10);
             ctx.closePath();
             ctx.globalCompositeOperation = 'destination-out';
         }
