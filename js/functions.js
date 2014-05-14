@@ -27,7 +27,7 @@ $(function() {
         var height = $("#container").height();
 
         cheight = height - 20; // subtract the fix height
-        cwidth = width;
+        cwidth = width -20;
 
         // set canvas width and height
         $("#canvas").attr('width', cwidth);
@@ -39,11 +39,10 @@ $(function() {
                 window.scrollTo(0, 1);
             }, 100);
         }
-        /*ctx.fillStyle = 'green';
+        ctx.fillStyle = 'green';
         ctx.fillRect(0, 0, cwidth, cheight);
         ctx.fillStyle = 'black';
-        */
-        //ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
+        ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
         /*
         // write number of orientation changes and resize events
         ctx.fillStyle = 'white';
@@ -55,7 +54,7 @@ $(function() {
         var img = document.createElement('IMG');
         img.onload = function () {
             ctx.beginPath();
-            ctx.drawImage(img, 10, 10);
+            ctx.drawImage(img, 10, 10, img.width-20, img.height-20, 10, 10, canvas.width-20, canvas.height-20);
             ctx.closePath();
             ctx.globalCompositeOperation = 'destination-out';
         }
