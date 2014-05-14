@@ -27,9 +27,10 @@
         }
         #main{
             display:block;
-            width:80%;
-            padding:50px 10%;
-            height:400px;
+            width:90%;
+            padding:10%;
+            min-height:400px;
+            height: 90%;
         }
     </style>
 </head>
