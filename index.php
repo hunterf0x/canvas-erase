@@ -33,7 +33,7 @@
     <canvas id="canvas">
         HTML5 Canvas not supported.
     </canvas>
-    <div id="fix">Some Text Here</div>
+    <div id="fix">asdasd </div>
 </div>
 
 

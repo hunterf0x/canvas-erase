@@ -426,6 +426,18 @@ body,html
     top: 0;
     left: 0;
     background: yellow;
-    height: 20px;
+    /*height: 20px;*/
     tex-align: center;
+    background: url('../img/mapa.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+html {
+    background: url('../img/mapa.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

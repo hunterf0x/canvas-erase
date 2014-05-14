@@ -31,7 +31,9 @@ $(function() {
 
         // set canvas width and height
         $("#canvas").attr('width', cwidth);
-        $("#canvas").attr('height', cheight)
+        $("#canvas").attr('height', cheight);
+
+
 
         // hides the WebKit url bar
         if (ios) {
