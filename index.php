@@ -40,6 +40,7 @@
             vertical-align: top;
             display: block;
             overflow: auto;
+            position: absolute;
         }
 
         #fix {
