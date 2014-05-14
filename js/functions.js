@@ -42,7 +42,7 @@ $(function() {
             }, 100);
         }
         ctx.fillStyle = 'white';
-        ctx.fillRect(0, 0, cwidth, cheight-20);
+        ctx.fillRect(0, 0, cwidth, cheight);
         ctx.fillStyle = 'black';
         ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
         /*
