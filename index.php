@@ -9,7 +9,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <meta name="viewport" content="minimal-ui">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="stylesheet" href="css/normalize.min.css">
