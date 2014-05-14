@@ -20,7 +20,7 @@ $(function() {
 
         if (ios) {
             // increase height to get rid off ios address bar
-            $("#container").height($(window).height() + 60)
+            $("#container").height($(window).height() + 20)
         }
 
         var width = $("#container").width();
