@@ -20,7 +20,7 @@ $(function() {
 
         if (ios) {
             // increase height to get rid off ios address bar
-            $("#container").height($(window).height() + 60)
+            $("#container").height($(window).height())
         }
 
         var width = $("#container").width();
@@ -31,7 +31,7 @@ $(function() {
 
         // set canvas width and height
         $("#canvas").attr('width', cwidth);
-        $("#canvas").attr('height', cheight)
+        $("#canvas").attr('height', cheight-40)
 
         // hides the WebKit url bar
         if (ios) {
