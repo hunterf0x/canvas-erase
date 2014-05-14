@@ -27,7 +27,7 @@ $(function() {
         var height = $("#container").height();
 
         cheight = height - 20; // subtract the fix height
-        cwidth = width -20;
+        cwidth = width;
 
         // set canvas width and height
         $("#canvas").attr('width', cwidth);
