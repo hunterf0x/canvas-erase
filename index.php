@@ -28,6 +28,7 @@
 
         #container
         {
+
             width: 100%;
             height: 100%;
             overflow: auto;
@@ -35,6 +36,7 @@
         }
 
         #container canvas {
+            z-index: 2;
             vertical-align: top;
             display: block;
             overflow: auto;
@@ -42,6 +44,7 @@
 
         #fix {
             position: absolute;
+            z-index:1;
             top: 0;
             left: 0;
             background: yellow;
