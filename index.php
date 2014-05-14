@@ -18,40 +18,7 @@
     <style>
         .content-hide {position:absolute;top:0px;left:0px;width:50%;height:10%;}
         /*#canvas {position:absolute;top:0px;left:0px;}*/
-        body,html
-        {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            color: black;
-        }
 
-        #container
-        {
-
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            /*background: blue;*/
-        }
-
-        #container canvas {
-            z-index: 2;
-            vertical-align: top;
-            display: block;
-            overflow: auto;
-            position: absolute;
-        }
-
-        #fix {
-            position: absolute;
-            z-index:1;
-            top: 0;
-            left: 0;
-            background: yellow;
-            height: 20px;
-            tex-align: center;
-        }
     </style>
 </head>
 <body>
