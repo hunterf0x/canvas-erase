@@ -61,7 +61,7 @@ $(function() {
             ctx.globalCompositeOperation = 'destination-out';
         }
 
-        img.src = "http://images.forwallpaper.com/files/thumbs/preview/8/84534__snow-frost-window_p.jpg";
+        img.src = "http://protected-mountain-3716.herokuapp.com/img/nieve1.jpeg";
 
 
         function drawPoint(pointX,pointY){
