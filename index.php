@@ -26,7 +26,7 @@
 
 
 <div id="container">
-    <canvas id="canvas">
+    <canvas id="canvas" style="display: none;">
         HTML5 Canvas not supported.
     </canvas>
     <div id="fix"><img src="img/nieve2.jpeg" /> </div>
