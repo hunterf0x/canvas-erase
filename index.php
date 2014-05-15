@@ -29,7 +29,7 @@
     <canvas id="canvas">
         HTML5 Canvas not supported.
     </canvas>
-    <div id="fix"><img src="img/mapa.png" /> </div>
+    <div id="fix"><img src="img/nieve2.jpeg" /> </div>
 </div>
 
 
