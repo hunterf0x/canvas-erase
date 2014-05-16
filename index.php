@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -21,6 +24,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
     <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -45,25 +49,55 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
 
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<div class="contenedor-full">
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">Juego ejemplo</h1>
+        </header>
+    </div>
+    <div class="main-container">
+        <div class="main wrapper clearfix">
 
+            <article>
+                <header>
+                    <h1>article header h1</h1>
+                    <p>Lorem ipsum dolor sit amet <strong><a href="#" id="jugar">Jugar</a></strong></p>
+                </header>
 
+                <footer>
+                    <h3>article footer h3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
+                </footer>
+            </article>
 
+            <aside>
+                <h3>aside</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+            </aside>
 
+        </div> <!-- #main -->
+    </div> <!-- #main-container -->
+
+</div>
 <div id="container">
-    <canvas id="canvas" >
+    <canvas id="canvas" style="display: none" >
         HTML5 Canvas not supported.
     </canvas>
     <div id="fix"> </div>
 
 </div>
+
+
+
 <div id="warning-message">
-    this website is only viewable in landscape mode
+    debes girar tu pantalla a modo landscape para continuar
 </div>
 
 

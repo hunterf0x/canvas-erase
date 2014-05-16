@@ -513,8 +513,8 @@ google.bookmarkbubble.Bubble.prototype.build_ = function() {
 
   // The "Add to Home Screen" text is intended to be the exact same size text
   // that is displayed in the menu of Mobile Safari on iPhone.
-  bubbleInner.innerHTML = 'Install this web app on your phone: tap ' +
-      '<b style="font-size:15px">+</b> and then <b>\'Add to Home Screen\'</b>';
+  bubbleInner.innerHTML = 'Instala esta web app en tu movil: tap ' +
+      '<b style="font-size:15px">+</b> <b>\'agrega a tu desktop\'</b>';
 
   var icon = document.createElement('div');
   icon.style['float'] = 'left';
