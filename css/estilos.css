@@ -443,3 +443,92 @@ nav a:hover {
         page-break-after: avoid;
     }
 }
+
+
+
+
+
+
+/*
+ ----------------------------
+ Modal Example 1
+ ----------------------------
+ */
+.modal-example-content {
+    width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: 0 none;
+}
+.modal-example-header {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 15px;
+}
+.modal-example-body p,
+.modal-example-header h4 {
+    margin: 0;
+}
+.modal-example-body {
+    padding: 20px;
+}
+
+/*
+ ----------------------------
+ Modal Example 2
+ ----------------------------
+ */
+#modal2 {
+    width: 600px;
+    height: 300px;
+    background: #FFF;
+    border-radius: 300px / 150px;
+    text-align: center;
+    position: relative;
+}
+#modal2 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*
+ ----------------------------
+ Modal Example 3
+ ----------------------------
+ */
+.justme .modal-example-content {
+    box-shadow: none;
+    border: none;
+}
+.justme .modal-example-header {
+    border: none;
+}
+
+/*
+ ----------------------------
+ Modal Example 4
+ ----------------------------
+ */
+#modal3 {
+    margin-top: 70px;
+}
+
+/*
+ ----------------------------
+ Custom animation
+ ----------------------------
+ */
+.custombox-close.customslide .custombox-modal-content {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    opacity: 1;
+    -webkit-transition-property: all;
+    -ms-transition-property: all;
+    transition-property: all !important;
+}

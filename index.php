@@ -47,15 +47,26 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- jQuery Custombox CSS -->
+    <link rel="stylesheet" href="css/jquery.custombox.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
+    <script src="http://192.168.1.135:8080/target/target-script-min.js#anonymous"></script>
 
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<div id="modal-orientacion" style="display: none;" class="modal-example-content">
+    <div class="modal-example-header">
+        <button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
+        <h4>Orientacion</h4>
+    </div>
+    <div class="modal-example-body">
+        <p>Gira tu equipo para poder participar <img src="img/iPadRotation1.png" style="max-width:100%;height:auto;" /> </p>
+    </div>
+</div>
 <div class="contenedor-full">
     <div class="header-container">
         <header class="wrapper clearfix">
@@ -68,8 +79,7 @@
             <article>
                 <header>
                     <h1>article header h1</h1>
-                    <p>Lorem ipsum dolor sit amet <strong><a href="#" id="jugar">Jugar</a></strong></p>
-                    <button onclick="activateFullscreen(document.documentElement);" >Launch Fullscreen</button>
+                    <p>Lorem ipsum dolor sit amet <strong><a id="jugar" href="#modal">Jugar</a></strong></p>
                 </header>
 
                 <footer>
@@ -102,12 +112,16 @@
 </div>
 
 
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 <script src="js/functions.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/vendor/zepto.min.js"></script>
 <script src="js/main.js"></script>
+<!-- jQuery Custombox JS -->
+<script src="js/jquery.custombox.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

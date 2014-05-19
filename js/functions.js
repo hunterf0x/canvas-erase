@@ -1,29 +1,47 @@
 /**
  * Created by hvaras on 13-05-14.
  */
-function activateFullscreen(element) {
-    if(element.requestFullscreen) {
-        element.requestFullscreen();
-    } else if(element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-    } else if(element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
-    } else if(element.msRequestFullscreen) {
-        element.msRequestFullscreen();
-    }
-}
+
 $(function() {
 
-    activateFullscreen(document.documentElement);
 
 
 
+    function activateFullscreen(element) {
+        if(element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if(element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if(element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if(element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
+    }
 
+    function fullScreenCancel() {
+        if(document.requestFullScreen) {
+            document.requestFullScreen();
+        } else if(document .webkitRequestFullScreen ) {
+            document.webkitRequestFullScreen();
+        } else if(document .mozRequestFullScreen) {
+            document.mozRequestFullScreen();
+        }
+    }
+
+
+    function cancela(){
+        console.log('popo');
+    }
+
+    //cancel full-screen
+    //setTimeout(cancela, 5000);
 
 
 
     $('#jugar').on('click',function(e){
         e.preventDefault();
+
 
         $.when(verificaOrientacion()).then(function(resp){
             if(resp==true){
@@ -32,23 +50,19 @@ $(function() {
                  scrollTop: $("#container").offset().top
                  },1000,'swing',initJuego());
                 $('#canvas').css('display','block');*/
+                activateFullscreen(document.documentElement);
                 $('.contenedor-full').fadeOut('slow',function(){
                     $('#container').fadeIn('slow',initJuego());
                 });
 
             }else{
-                alert('gira el disp');
+                $.fn.custombox(  {
+                    effect: 'blur',
+                    url:'#modal-orientacion'
+                });
+
             }
         })
-
-
-
-
-
-
-
-
-
     });
 
     function hideURLbar() {
@@ -60,8 +74,6 @@ $(function() {
     if (navigator.userAgent.indexOf('iPhone') != -1 || navigator.userAgent.indexOf('Android') != -1) {
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
-            document.body.requestFullscreen();
-            console.log('si');
         }, false);
     }
 
@@ -123,7 +135,7 @@ $(function() {
             ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, cwidth, cheight);
             ctx.fillStyle = 'black';
-            ctx.fillRect(10, 10, cwidth - 20, cheight - 20)
+            ctx.fillRect(0, 0, cwidth, cheight)
 
             // write number of orientation changes and resize events
             /*ctx.fillStyle = 'white';
@@ -137,7 +149,7 @@ $(function() {
                 var ratio = 1;
 
                 ctx.beginPath();
-                ctx.drawImage(img, 10, 10, img.width-20, img.height-20, 10, 10, canvas.width-20, canvas.height-20);
+                ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
 
                 ctx.closePath();
                 ctx.globalCompositeOperation = 'destination-out';
