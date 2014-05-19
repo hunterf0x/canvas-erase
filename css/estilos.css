@@ -46,15 +46,6 @@ body,html
 
 }
 
-#warning-message { display: none; }
-@media only screen and (orientation:portrait){
-    #container { display:none; }
-    .contenedor-full{display: block; !important}
-    #warning-message { display:block;color: black }
-}
-@media only screen and (orientation:landscape){
-    #warning-message { display:none; }
-}
 
 
 

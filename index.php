@@ -13,7 +13,8 @@
     <meta name="description" content="">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <meta http-equiv="cleartype" content="on">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -58,15 +59,7 @@
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<div id="modal-orientacion" style="display: none;" class="modal-example-content">
-    <div class="modal-example-header">
-        <button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
-        <h4>Orientacion</h4>
-    </div>
-    <div class="modal-example-body">
-        <p>Gira tu equipo para poder participar <img src="img/iPadRotation1.png" style="max-width:100%;height:auto;" /> </p>
-    </div>
-</div>
+
 <div class="contenedor-full">
     <div class="header-container">
         <header class="wrapper clearfix">
@@ -105,11 +98,16 @@
 
 </div>
 
-
-
-<div id="warning-message">
-    debes girar tu pantalla a modo landscape para continuar
+<div id="modal-orientacion" style="display: none;" class="modal-example-content">
+    <div class="modal-example-header">
+        <button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
+        <h4>Orientacion</h4>
+    </div>
+    <div class="modal-example-body">
+        <p>Gira tu equipo para poder participar <img src="img/iPadRotation1.png" style="max-width:100%;height:auto;" /> </p>
+    </div>
 </div>
+
 
 
 
@@ -120,6 +118,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/vendor/zepto.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/juego.js"></script>
 <!-- jQuery Custombox JS -->
 <script src="js/jquery.custombox.js"></script>
 
