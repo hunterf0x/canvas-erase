@@ -69,6 +69,7 @@
                 <header>
                     <h1>article header h1</h1>
                     <p>Lorem ipsum dolor sit amet <strong><a href="#" id="jugar">Jugar</a></strong></p>
+                    <button onclick="activateFullscreen(document.documentElement);" >Launch Fullscreen</button>
                 </header>
 
                 <footer>
@@ -86,8 +87,8 @@
     </div> <!-- #main-container -->
 
 </div>
-<div id="container">
-    <canvas id="canvas" style="display: none" >
+<div id="container" style="display: none;">
+    <canvas id="canvas" >
         HTML5 Canvas not supported.
     </canvas>
     <div id="fix"> </div>

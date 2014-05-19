@@ -1,7 +1,26 @@
 /**
  * Created by hvaras on 13-05-14.
  */
+function activateFullscreen(element) {
+    if(element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if(element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if(element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+}
 $(function() {
+
+    activateFullscreen(document.documentElement);
+
+
+
+
+
+
 
     $('#jugar').on('click',function(e){
         e.preventDefault();
@@ -9,10 +28,13 @@ $(function() {
         $.when(verificaOrientacion()).then(function(resp){
             if(resp==true){
 
-                 $('html, body').animate({
+                 /*$('html, body').animate({
                  scrollTop: $("#container").offset().top
                  },1000,'swing',initJuego());
-                $('#canvas').css('display','block');
+                $('#canvas').css('display','block');*/
+                $('.contenedor-full').fadeOut('slow',function(){
+                    $('#container').fadeIn('slow',initJuego());
+                });
 
             }else{
                 alert('gira el disp');
@@ -38,6 +60,8 @@ $(function() {
     if (navigator.userAgent.indexOf('iPhone') != -1 || navigator.userAgent.indexOf('Android') != -1) {
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
+            document.body.requestFullscreen();
+            console.log('si');
         }, false);
     }
 
