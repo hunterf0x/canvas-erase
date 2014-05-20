@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="css/jquery.custombox.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="http://192.168.1.100:8080/target/target-script-min.js#anonymous"></script>
+    <script src="http://192.168.1.135:8080/target/target-script-min.js#anonymous"></script>
 
 </head>
 <body>
@@ -72,7 +72,7 @@
             <article>
                 <header>
                     <h1>article header h1</h1>
-                    <p>Lorem ipsum dolor sit amet <strong><a id="jugar" href="#modal">Jugar</a></strong></p>
+                    <p>Lorem ipsum dolor sit amet <strong><button id="jugar" >Jugar</button></strong></p>
                 </header>
 
                 <footer>
@@ -104,7 +104,7 @@
         <h4>Orientacion</h4>
     </div>
     <div class="modal-example-body">
-        <p>Gira tu equipo para poder participar <img src="img/iPadRotation1.png" style="max-width:100%;height:auto;" /> </p>
+        <p>Gira tu equipo para poder continuar <img src="img/iPadRotation1.png" style="max-width:100%;height:auto;" /> </p>
     </div>
 </div>
 
