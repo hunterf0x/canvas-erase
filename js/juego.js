@@ -96,7 +96,7 @@ function initJuego(){
     var resizeTimeout;
     $(window).resize(function() {
         clearTimeout(resizeTimeout);
-        //resizeTimeout = setTimeout(resizeCanvas, 100);
+        resizeTimeout = setTimeout(resizeCanvas, 100);
     });
 
 
