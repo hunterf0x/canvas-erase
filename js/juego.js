@@ -74,14 +74,19 @@ function initJuego(){
             /*var body = $("html, body");
             body.animate({scrollTop:0}, 'fast', 'swing');*/
             $.fn.custombox('close');
+            $('.contenedor-full').hide();
 
         }else{
             $.fn.custombox(  {
                 effect: 'fadein',
                 url:'#modal-orientacion',
-                close: function () {
-                   alert('asd');
+                escKey:false,
+                open: function(){
+                    $('.contenedor-full').show();
                 }
+                /*close: function () {
+                    $('.contenedor-full').show();
+                }*/
             });
         }
     }
