@@ -52,7 +52,10 @@
     <link rel="stylesheet" href="css/jquery.custombox.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="http://192.168.1.135:8080/target/target-script-min.js#anonymous"></script>
+    <!--<script src="http://192.168.1.70:8080/target/target-script-min.js#anonymous"></script>-->
+    <script>
+        window.onerror = function(error) { console.log(error); };
+    </script>
 
 </head>
 <body>
